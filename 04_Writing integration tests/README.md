@@ -103,7 +103,7 @@ The `get-index` function needs a number of environment variables.
 
 6. Add `init.js` under `steps` folder
 
-7. Modify `init.js` to the following (using the deployed API Gateway url for the `restaurants_api` environment variable, and use the DynamoDB table you created)
+7. Modify `init.js` to the following (using the deployed API Gateway url for the `restaurants_api` environment variable, and use the DynamoDB table you created). **Don't forget to put your name in the table name**.
 
 ```javascript
 let initialized = false
@@ -114,7 +114,7 @@ const init = async () => {
   }
 
   process.env.restaurants_api   = "https://xxx.execute-api.eu-west-1.amazonaws.com/dev/restaurants"
-  process.env.restaurants_table = "restaurants-dev-yancui"
+  process.env.restaurants_table = "restaurants-dev-<PUT YOUR NAME HERE>"
   process.env.AWS_REGION        = "eu-west-1"
   
   initialized = true
